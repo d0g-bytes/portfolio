@@ -1,0 +1,21 @@
+FROM node:20-slim
+
+WORKDIR /workspace/backend
+
+# Copy package.json first
+COPY package*.json ./
+
+# Install dependencies as root (node_modules will be in volume)
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Change ownership of workspace for node user
+RUN chown -R node:node /workspace
+
+# Switch to non-root user
+USER node
+
+EXPOSE 5000
+CMD ["npm", "run", "dev"]

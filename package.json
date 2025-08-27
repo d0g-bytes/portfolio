@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Full-stack portfolio application with React, TypeScript, Express.js, and PostgreSQL",
+  "scripts": {
+    "dev": "docker-compose -f docker-compose.dev.yml up --build",
+    "dev:detached": "docker-compose -f docker-compose.dev.yml up -d --build",
+    "prod": "docker-compose up --build",
+    "prod:detached": "docker-compose up -d --build",
+    "stop": "docker-compose -f docker-compose.dev.yml down",
+    "stop:prod": "docker-compose down",
+    "clean": "docker-compose -f docker-compose.dev.yml down -v --remove-orphans",
+    "logs": "docker-compose -f docker-compose.dev.yml logs -f",
+    "logs:backend": "docker-compose -f docker-compose.dev.yml logs -f backend",
+    "logs:frontend": "docker-compose -f docker-compose.dev.yml logs -f frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "format": "npm run format:backend && npm run format:frontend",
+    "format:backend": "cd backend && npm run format",
+    "format:frontend": "cd frontend && npm run format",
+    "format:check": "npm run format:check:backend && npm run format:check:frontend",
+    "format:check:backend": "cd backend && npm run format:check",
+    "format:check:frontend": "cd frontend && npm run format:check"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "typescript",
+    "express",
+    "postgresql",
+    "docker"
+  ],
+  "author": "",
+  "license": "ISC"
+}
