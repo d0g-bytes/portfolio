@@ -1,9 +1,8 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Blogging from "./pages/Blogging";
 import Animations from "./pages/Animations";
+import Blogging from "./pages/Blogging";
 import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 
 const Router = () => {
