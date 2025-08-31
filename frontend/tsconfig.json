@@ -8,10 +8,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    },
-
-    // skip on flagging unused imports
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
+    }
   }
 }
